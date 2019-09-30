@@ -1,0 +1,40 @@
+SampleID,GEOID,Age,Gender,Ethnicity,Race,illness,Treatment,Pathogens,!Sample_hyb_protocol,Pathform,ID_REF
+I027,GSM365197,Age: 64,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,"Fortum, Ceftriaxone",E. coli,HumanHT-12 Expression BeadChip,GPL6947,GSM365197
+I028,GSM365198,Age: 81,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,"Ceftriaxone, Fortum,Clindamycin",Corynebacterium spp.,HumanHT-12 Expression BeadChip,GPL6947,GSM365198
+I029,GSM365199,Age: 74,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,"Fortum,Ceftriaxone,Tazocin",Staphylococcus aureus,HumanHT-12 Expression BeadChip,GPL6947,GSM365199
+I031,GSM365200,Age: 48,M,Not Hispanic or Latino,Asian,Sepsis/Other infections,Fortum,Enterococcus spp,HumanHT-12 Expression BeadChip,GPL6947,GSM365200
+I032,GSM365201,Age: 54,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,"Fortum, Tazocin",Enterococcus faecium,HumanHT-12 Expression BeadChip,GPL6947,GSM365201
+I033,GSM365202,Age: 63,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,"Tazocin, Ceftriaxone,  Fortum",E. coli,HumanHT-12 Expression BeadChip,GPL6947,GSM365202
+I034,GSM365203,Age: 43,M,Not Hispanic or Latino,Asian,Sepsis/Other infections,Tazocin,Aeromonas hydrophila,HumanHT-12 Expression BeadChip,GPL6947,GSM365203
+M031,GSM365204,Age: 49,M,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Fortum, Bactrim, Trazocin",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365204
+M032,GSM365205,Age: 54,M,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Fortum , Doxycycline, Sulperazone",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365205
+M033,GSM365206,Age: 44,M,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Fortum ,  Sulperazone, Bactrim, Ciprofloxacin",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365206
+M034,GSM365207,Age: 40,F,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Fortum, Bactrim, Ceftazidime, Ceftriaxone",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365207
+M035,GSM365208,Age: 56,M,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Ceftriaxone, Ceftazidime, Fortum",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365208
+M036,GSM365209,Age: 41,F,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Ceftriaxone, Ceftazidime",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365209
+M037,GSM365210,Age: 42,F,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Bactrim, Fortum, Cloxacillin",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365210
+M038,GSM365211,Age: 49,F,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Ceftriaxone, Fortum,Ceftazidime, Levofloxacin",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365211
+H005,GSM365212,Age: 37,M,Not Hispanic or Latino,Asian,Control/healthy,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365212
+H006,GSM365213,Age: 35,M,Not Hispanic or Latino,Asian,Control/healthy,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365213
+H007,GSM365214,Age: 46,F,Not Hispanic or Latino,Asian,Control/healthy,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365214
+H008,GSM365215,Age: 67,M,Not Hispanic or Latino,Asian,Control/healthy,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365215
+H009,GSM365216,Age: 37,F,Not Hispanic or Latino,Asian,Control/healthy,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365216
+DM009,GSM365217,Age: 50,F,Not Hispanic or Latino,Asian,Control/type 2 diabetes,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365217
+DM010,GSM365218,Age: 50,F,Not Hispanic or Latino,Asian,Control/type 2 diabetes,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365218
+DM011,GSM365219,Age: 56,F,Not Hispanic or Latino,Asian,Control/type 2 diabetes,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365219
+DM012,GSM365220,Age: 57,F,Not Hispanic or Latino,Asian,Control/type 2 diabetes,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365220
+DM013,GSM365221,Age: 71,F,Not Hispanic or Latino,Asian,Control/type 2 diabetes,Treatment:,Pathogen:,HumanHT-12 Expression BeadChip,GPL6947,GSM365221
+Rerun_I014,GSM365229,Age: 54,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,"Ceftriaxone, Ceftazidime, Levofloxacin",Salmonella spp.,HumanHT-12 Expression BeadChip,GPL6947,GSM365229
+Rerun_M007,GSM365230,Age: 50,M,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Ceftazidime, Tazocin",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365230
+Rerun_M008,GSM365231,Age: 70,F,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Ceftazidime, Bactrim",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365231
+Rerun_M009,GSM365232,Age: 48,F,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,Sulperazone,B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365232
+Rerun_M012,GSM365233,Age: 56,M,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Sulperazone, Bactrim,Cetazidime",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365233
+Rerun_M014,GSM365234,Age: 65,F,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Cloxacilin,Ceftazidime",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365234
+Rerun_I009,GSM365235,Age: 52,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,"Ceftazidime, Cloxacillin",Staphylococcus aureus,HumanHT-12 Expression BeadChip,GPL6947,GSM365235
+Rerun_I010,GSM365236,Age: 72,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,Ceftriaxone,E.coli,HumanHT-12 Expression BeadChip,GPL6947,GSM365236
+Rerun_I012,GSM365237,Age: 69,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,Ceftazidime,C.albicans,HumanHT-12 Expression BeadChip,GPL6947,GSM365237
+Rerun_M001,GSM365238,Age: 68,M,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Ceftazidime, Bactrim",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365238
+Rerun_M002,GSM365239,Age: 43,F,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,"Ceftriaxone, Ceftazidime",B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365239
+Rerun_M006,GSM365240,Age: 46,M,Not Hispanic or Latino,Asian,Sepsis/Melioidosis,Ceftriaxone,B.pseudomallei,HumanHT-12 Expression BeadChip,GPL6947,GSM365240
+Rerun_I001,GSM365241,Age: 52,M,Not Hispanic or Latino,Asian,Sepsis/Other infections,Ceftriaxone,"Streptococcus non A,B",HumanHT-12 Expression BeadChip,GPL6947,GSM365241
+Rerun_I008,GSM365242,Age: 70,F,Not Hispanic or Latino,Asian,Sepsis/Other infections,"Bactrim, Ceftazidime",E.coli,HumanHT-12 Expression BeadChip,GPL6947,GSM365242
