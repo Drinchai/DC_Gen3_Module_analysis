@@ -2,7 +2,7 @@
 rm(list=ls())
 
 # Set working directory (location on your computer)
-setwd("~/Dropbox (TBI-Lab)/DC_Gen3_Module_analysis")
+setwd("~/DC_Gen3_Module_analysis")
 
 library(reshape2)
 library(ggplot2)
@@ -22,6 +22,10 @@ rownames(Group_plot)==rownames(Gen3_ann)                         # check if rown
 rownames(Group_plot) <- Gen3_ann$position
 Group_plot <- as.data.frame(Group_plot)
 
+########## An example of DISPLAY DATA > 15 %
+Group_plot[abs(Group_plot) < 15] <- 0
+
+#check data
 head(Group_plot)
 
 # creat new grid with all filtered cluster##
