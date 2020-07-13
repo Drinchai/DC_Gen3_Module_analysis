@@ -1,7 +1,7 @@
 # Setup environment
 rm(list=ls())
 # Set working directory (location on your computer)
-setwd("~/Dropbox (TBI-Lab)/DC_Gen3_Module_analysis")
+setwd("~/DC_Gen3_Module_analysis")
 ## dependency
 library("gtools")
 
@@ -67,6 +67,9 @@ for (k in 1:nrow(dat_log2)) {
 
 pvalue_Group <- data.frame(tt_pval)
 
+pvalue_Group.FDR <- apply(pvalue_Group.FDR,2,function(x) p.adjust(x,method = "fdr")) ## Apply multiple correction testing
+pvalue_Group.FDR <- as.data.frame(pvalue_Group.FDR)
+
 ####################################
 ####calculate fold change ##
 ####################################
@@ -95,9 +98,9 @@ FCgroup <- data.frame(FC.group)
 # Calculate percentage of response ##
 ############################################ 
 #logical check ##
-Group.up <- (FCgroup > 0)+(pvalue_Group < 0.05) == 2          # TRUE Up gene, Both TRUE
+Group.up <- (FCgroup > 0)+(pvalue_Group.FDR < 0.1) == 2          # TRUE Up gene, Both TRUE
 
-Group.down <- (FCgroup < 0) + (pvalue_Group < 0.05) == 2      # TRUE down gene, Both TRUE
+Group.down <- (FCgroup < 0) + (pvalue_Group.FDR < 0.1) == 2      # TRUE down gene, Both TRUE
 
 
 ################################################
@@ -147,10 +150,6 @@ down.mods.group <- as.data.frame(lapply(down.mods.group, as.numeric))
 down.mods.group <- (down.mods.group/down.mods.group$genes)*100
 rownames(down.mods.group) <- rownames(down.mods.group.cal)
 down.mods.group <- down.mods.group[,-ncol(down.mods.group)]
-
-########## DISPLAY DATA > 15 %
-up.mods.group[up.mods.group < 15] <- 0
-down.mods.group[down.mods.group < 15] <- 0
 
 ## Prepare data for ploting ## 
 res.mods.group <- up.mods.group[,]                # prepare a new matrix for new data
