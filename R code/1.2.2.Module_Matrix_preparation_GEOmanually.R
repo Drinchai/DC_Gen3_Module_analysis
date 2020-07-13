@@ -1,13 +1,13 @@
 #set enviroment
 rm(list = ls())
-setwd("~/Dropbox (TBI-Lab)/DC_Gen3_Module_analysis")
+setwd("~/DC_Gen3_Module_analysis")
 
 # Load Module list ##
 load("./R data/DC_ModuleGen3_2019.Rdata")
 
 # Set parameters
 GSE_ID = "GSE13015"
-platform = "GPL6106" # "GPL6106" "GPL6947"                                                 # Available platforms for each GSE dataset can be checked by running code below
+platform = "GPL6106" # "GPL6106" "GPL6947" # Available platforms for each GSE dataset can be checked by running code below
 
 ##load expression data
 # Option 2 (from mamnully downloaded txt file; Supplementary table 1: "GSE13015-GPL6106_series_matrix.txt")
