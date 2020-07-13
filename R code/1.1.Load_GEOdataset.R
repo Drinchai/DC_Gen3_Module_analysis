@@ -2,7 +2,7 @@
 rm(list=ls())
 
 # Set working directory (location on your computer)
-setwd("~/Dropbox (TBI-Lab)/DC_Gen3_Module_analysis")
+setwd("~/DC_Gen3_Module_analysis")
 
 #Load package
 library(GEOquery)
@@ -10,7 +10,7 @@ library(GEOquery)
 # GSE13015 will be used as an example datasets. In this dataset was included by two different platform "GPL6106" and "GPL6947" in a GSE file.
 # Set parameters
 GSE_ID = "GSE13015"
-platform = "GPL6106" # "GPL6106" "GPL6947"                                                 # Available platforms for each GSE dataset can be checked by running code below
+platform = "GPL6106" # "GPL6106" "GPL6947" # Available platforms for each GSE dataset can be checked by running code below
 
 #GET GSE soft file and matrix
 Dat <- getGEO(GSE_ID, GSEMatrix=FALSE)
