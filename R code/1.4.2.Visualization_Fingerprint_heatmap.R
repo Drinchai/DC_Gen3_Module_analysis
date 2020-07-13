@@ -2,7 +2,7 @@
 rm(list=ls())
 
 # Set working directory (location on your computer)
-setwd("~/Dropbox (TBI-Lab)/DC_Gen3_Module_analysis")
+setwd("~/DC_Gen3_Module_analysis")
 
 # Load dependencies
 library(stringr)
@@ -11,7 +11,7 @@ library(ComplexHeatmap)
 # Set parameters
 GSE_ID = "GSE13015"
 platform = "GPL6106"
-size_of_circle = 0.0066   # adjust size of circle manually
+
 
 # Load data
 load("./R data/DC_ModuleGen3_2019.Rdata")
@@ -41,7 +41,10 @@ Sum.mod.sin.comp.withF <- Sum.mod.sin.comp[rownames(Sum.mod.sin.comp) %in% mod.w
 ####### DOT Heatmap by complexHeatmap ####
 
 df_plot = Sum.mod.sin.comp.withF
-df_plot = df_plot[rowSums(df_plot != 0) >20,]                                                        # keep only rows that have values for more than 20 individuals
+df_plot = df_plot[rowSums(df_plot != 0) >20,]   # keep only rows that have values for more than 20 individuals
+
+########## An example of DISPLAY DATA > 15 %
+df_plot[abs(df_plot) < 15] <- 0
 
 sample_info = sample_info[order(sample_info$Type),]
 sample_info = sample_info[order(sample_info$Group),]
@@ -65,16 +68,18 @@ ha_column = HeatmapAnnotation(df = data.frame(Illness = sample_info$Group,
 pdf(paste0("./Figure/Individual comparison/", GSE_ID, "_", platform, "_Module_Gen3_individual_FC1.5diff100_20perct_nocluster.pdf"), height = 27, width = 18)
 ht=Heatmap(df_plot,
            cluster_rows = TRUE,
-           cluster_columns = TRUE,
+           cluster_columns = T,
+           height = unit(4, "mm")*nrow(df_plot), 
+           width  = unit(4, "mm")*ncol(df_plot), 
            rect_gp = gpar(type = "none"),
            top_annotation = ha_column,
            name = "% Response",
-           row_names_max_width = unit(6,"in"),
+           row_names_max_width = unit(10,"in"),
            row_title_gp = gpar(fontsize = 0.1),
-           column_names_gp = gpar(fontsize = 14),
-           row_names_gp = gpar(fontsize = 14),
+           column_names_gp = gpar(fontsize = 12),
+           row_names_gp = gpar(fontsize = 13),
            cell_fun = function(j, i, x, y, width, height, fill) {
-             grid.circle(x = x, y = y, r = size_of_circle ,gp = gpar(fill = col_fun(df_plot[i, j]), col = NA))
+             grid.circle(x = x, y = y, r = unit(1.85, "mm") ,gp = gpar(fill = col_fun(df_plot[i, j]), col = NA))
            }
 )
 draw(ht,heatmap_legend_side = "left", annotation_legend_side = "left", padding = unit(c(2, 20, 2, 2), "mm"))
