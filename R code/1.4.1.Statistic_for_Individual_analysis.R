@@ -2,7 +2,7 @@
 rm(list=ls())
 
 # Set working directory (location on your computer)
-setwd("~/Dropbox (TBI-Lab)/DC_Gen3_Module_analysis")
+setwd("~/DC_Gen3_Module_analysis")
 
 # load dependencies
 library(matrixStats)
@@ -92,7 +92,7 @@ up.mods.sin <- as.data.frame(lapply(up.mods.sin, as.numeric))                   
 up.mods.sin <- (up.mods.sin/up.mods.sin$gene)*100 
 rownames(up.mods.sin) <-rownames(up.mods.sin.cal)
 up.mods.sin <- up.mods.sin[,-ncol(up.mods.sin)]
-up.mods.sin[up.mods.sin < 15] <- 0
+
 
 #####DOWN GENE#######
 down.mods.sin <- data.frame(Module = row.names(test.down), test.down,gene=0)                         # create a new blank table
@@ -115,8 +115,6 @@ down.mods.sin <- as.data.frame(lapply(down.mods.sin, as.numeric))               
 down.mods.sin <- (down.mods.sin/down.mods.sin$gene)*100 
 rownames(down.mods.sin) <-rownames(down.mods.sin.cal)
 down.mods.sin <- down.mods.sin[,-ncol(down.mods.sin)]
-
-down.mods.sin[down.mods.sin < 15] <- 0
 
 
 ## Prepare data for ploting ## 
