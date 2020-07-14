@@ -1,7 +1,8 @@
 #set enviroment
 rm(list = ls())
-setwd("~/DC_Gen3_Module_analysis")
+setwd("~/Dropbox (TBI-Lab)/DC_Gen3_Module_analysis")
 
+library(preprocessCore)
 # Load Module list ##
 load("./R data/DC_ModuleGen3_2019.Rdata")
 
@@ -14,6 +15,11 @@ platform = "GPL6106" # "GPL6106" "GPL6947" # Available platforms for each GSE da
 data.matrix = read.table(file = paste0("./Dataset/", GSE_ID, "-", platform, "_series_matrix.txt"),sep="\t",header = TRUE,stringsAsFactors = FALSE)
 rownames(data.matrix)= data.matrix$ID_REF
 data.matrix$ID_REF = NULL
+
+##quantile normalization
+data.matrix.nor <- normalize.quantiles(as.matrix(data.matrix))
+colnames(data.matrix.nor) = colnames(data.matrix)
+rownames(data.matrix.nor) = rownames(data.matrix)
 
 ## Probe annotation could be manully dowload from GEO 
 # "GPL6106":  https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL6106
@@ -36,19 +42,19 @@ sample.info$Group = gsub(sample.info$Group,pattern = "type 2 diabetes",replaceme
 sample.info$Group = gsub(sample.info$Group,pattern = "Other infections",replacement = "Other")
 
 ## prepare data at the gene level by aggregate value of each gene 
-data.matrix = aggregate(data.matrix,FUN = mean,by=list(data.matrix$Symbol))
-data.matrix$Symbol = NULL
-rownames(data.matrix) = data.matrix$Group.1
-data.matrix$Group.1 = NULL
+data.matrix.nor = aggregate(data.matrix.nor,FUN = mean,by=list(data.matrix.nor$Symbol))
+data.matrix.nor$Symbol = NULL
+rownames(data.matrix.nor) = data.matrix.nor$Group.1
+data.matrix.nor$Group.1 = NULL
 
 # check data ##
-head(data.matrix)                          # The data need to be chceked whether they are log2 transformed or raw data.
-rownames(data.matrix)                      # check gene symbol
-data.matrix[data.matrix<10]=10             # fillter gene that has expression value < 10 = 10
+head(data.matrix.nor)                          # The data need to be chceked whether they are log2 transformed or raw data.
+rownames(data.matrix.nor)                      # check gene symbol
+data.matrix.nor[data.matrix.nor<10]=10             # fillter gene that has expression value < 10 = 10
 
 ### Prepare expression matrix with module list
 df1=Module_listGen3
-df2=data.frame(data.matrix)
+df2=data.frame(data.matrix.nor)
 df2$Gene = rownames(df2)
 
 #Annotate gene module to expression matrix
