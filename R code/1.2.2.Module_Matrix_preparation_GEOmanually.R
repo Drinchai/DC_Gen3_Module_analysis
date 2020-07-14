@@ -1,6 +1,6 @@
 #set enviroment
 rm(list = ls())
-setwd("~/Dropbox (TBI-Lab)/DC_Gen3_Module_analysis")
+setwd("~/DC_Gen3_Module_analysis")
 
 library(preprocessCore)
 # Load Module list ##
