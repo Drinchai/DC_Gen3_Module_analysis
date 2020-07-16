@@ -50,7 +50,7 @@ rownames(sample.info) == colnames(dat_log2)
 k=1
 for (k in 1:nrow(dat_log2)) {
   signature = rownames(dat_log2)[k]
-  test.table <- sample.info
+  test.table <- sample_info
   test.table$scores <- dat_log2[k,]
   i=1
   for (i in 1:length(group.test)) {
@@ -81,7 +81,7 @@ rownames(FC.group) = rownames(df_raw)
 k=1
 for (k in 1:nrow(df_raw)) {
   signature = rownames(df_raw)[k]
-  test.table <- sample.info
+  test.table <- sample_info
   test.table$scores <- df_raw[k,]
   for (i in 1:length(group.test)) {
     group = group.test[i]
