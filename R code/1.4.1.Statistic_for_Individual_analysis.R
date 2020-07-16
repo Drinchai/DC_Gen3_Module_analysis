@@ -37,7 +37,7 @@ Diff.mod.ind.sin [,] <- NA
 k=1
 for (k in 1:nrow(df_raw)) {
   signature = rownames(df_raw)[k]
-  test.table <- sample.info 
+  test.table <- sample_info 
   test.table$scores <- df_raw[k,]
   T4 <- test.table
   T3 <- test.table[test.table$Group %in% c("Control"),]
@@ -52,7 +52,7 @@ FC.mod.ind.sin [,] <- NA
 
 for (k in 1:nrow(df_raw)) {
   signature = rownames(df_raw)[k]
-  test.table <- sample.info 
+  test.table <- sample_info 
   test.table$scores <- df_raw[k,]
   T4 <- test.table
   T3 <- test.table[test.table$Group %in% c("Control"),]
