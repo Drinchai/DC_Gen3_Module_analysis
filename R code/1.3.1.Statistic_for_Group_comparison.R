@@ -67,7 +67,7 @@ for (k in 1:nrow(dat_log2)) {
 
 pvalue_Group <- data.frame(tt_pval)
 
-pvalue_Group.FDR <- apply(pvalue_Group.FDR,2,function(x) p.adjust(x,method = "fdr")) ## Apply multiple correction testing
+pvalue_Group.FDR <- apply(pvalue_Group,2,function(x) p.adjust(x,method = "fdr")) ## Apply multiple correction testing
 pvalue_Group.FDR <- as.data.frame(pvalue_Group.FDR)
 
 ####################################
